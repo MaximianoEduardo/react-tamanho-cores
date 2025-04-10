@@ -1,54 +1,61 @@
-# React + TypeScript + Vite
+# Teste Front end
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## Live Code
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+[URL Live]()
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Funcionalidades Principais
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Busca de dados de produtos via API
+- Exibição organizada das informações do produto
+- Gerenciamento de variações (SKUs) por cor e tamanho
+- Interface interativa para seleção de variações
+- O componente HandleItens é responsável por gerenciar e exibir informações de produtos e suas variações (SKUs) em um e-commerce, com foco especial nas dimensões "Cor" e "Tamanho".
+
+---
+
+## Estrutura do Projeto
+
+- Arquivos Principais
+- HandleItens.tsx: Componente principal
+- Interfaces/vtex.ts: Tipagens TypeScript (IVtexItens, ISKU, IDimension)
+- Services/httpClient.ts: Serviço de requisições HTTP
+
+---
+
+## Dependências
+
+- React Hooks (useState, useEffect)
+- TypeScript para tipagem estática
+- Axios
+
+### Rodando a aplicação
+
+```bash
+
+# Clone este repositório
+$ git clone https://github.com/MaximianoEduardo/react-tamanho-cores
+
+# Acesse a pasta do projeto no seu terminal/cmd
+$ cd react-tamanho-cores
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação em modo de desenvolvimento
+$ npm start
+
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🛠 Tecnologias
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+As seguintes ferramentas foram usadas na construção do projeto:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+- **[React](https://react.dev/)**
+- **[Typescript](https://www.typescriptlang.org/)**
+
+> Veja o arquivo  [package.json](./package.json)
